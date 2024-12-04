@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People List</title>
+</head>
+<body>
+    <h1>People List</h1>
+    {% for person in people %}
+        <h3>{{ person.first_name }} {{ person.last_name }}</h3>
+    {% empty %}
+        <h3>Not found</h3>
+    {% endfor %}
+</body>
+</html>
