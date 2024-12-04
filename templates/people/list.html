@@ -6,10 +6,12 @@
 </head>
 <body>
     <h1>People List</h1>
+    <a href="{% url 'people:create' %}">Create Person</a>
     {% for person in people %}
-        <h3>{{ person.first_name }} {{ person.last_name }}</h3>
+        <a href="{% url 'people:detail' pk=person.pk %}"><h3>{{ person.first_name }} {{ person.last_name }}</h3></a>
     {% empty %}
         <h3>Not found</h3>
     {% endfor %}
+    <a href="{% url 'home' %}">Back to home</a>
 </body>
 </html>

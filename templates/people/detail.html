@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ person.title }}</title>
+</head>
+<body>
+    <h1>{{ person.first_name }} {{ person.last_name }}</h1>
+    <h3>Age: {{ person.age }}</h3>
+    <h3>Job title: {{ person.job_title }}</h3>
+    <h3>Address: {{ person.address }}</h3>
+    <br>
+    <a href="{% url 'people:delete' pk=person.pk %}">Delete</a>
+    <a href="{% url 'people:list' %}">Back to list</a>
+</body>
+</html>
